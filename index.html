@@ -1,12 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* --- General Layout & Typography --- */
+        :root {
+            --bg-color: #0f0f11;
+            --card-bg: #1a1a1d;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --accent: #00d4ff; /* Cyberpunk Blue */
+            --silver: #c0c0c0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid #333;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--silver);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* --- Main Content --- */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 1rem;
+            animation: fadeIn 1s ease-in;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0.5rem 0 2rem 0;
+            font-weight: 800;
+            letter-spacing: -2px;
+            /* Gradient Text Effect */
+            background: linear-gradient(135deg, #ffffff 0%, #b0b0b0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #333;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            p { font-size: 1.2rem; }
+        }
+    </style>
+</head>
 <body>
-  <head><title>Home</title></head>
-<header>
-  <nav><a href="https://silverfoot-pony.github.io/Silverbot">Silverbot</a></nav>
-</header>
-<h1>Ur a gay</h1>
-  <p>And also homosexual</p>
-<footer></footer>  
+
+  <header>
+    <nav>
+      <!-- Links to your other site -->
+      <a href="https://silverfoot-pony.github.io/Silverbot">Silverbot</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Ur a gay</h1>
+    <p>And also homosexual</p>
+  </main>
+
+  <footer>
+    &copy; 2026 Silverfoot-pony.github.io
+  </footer>  
+
 </body>
 </html>
