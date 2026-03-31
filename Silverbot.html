@@ -1,10 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silverbot</title>
+    <style>
+        /* --- Base Theme Variables --- */
+        :root {
+            --bg-color: #0f0f11;
+            --card-bg: #1a1a1d;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --accent: #00d4ff; 
+            --silver: #c0c0c0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid #333;
+            padding: 1rem 2rem;
+        }
+
+        header a {
+            text-decoration: none;
+            color: var(--silver);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        header a:hover {
+            color: var(--accent);
+        }
+
+        /* --- Main Content --- */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 1rem;
+            animation: fadeIn 1s ease-in;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0 0 1rem 0;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* --- Link Cards --- */
+        .link-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .card {
+            display: block;
+            background-color: var(--card-bg);
+            border: 1px solid #333;
+            padding: 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            background-color: #222;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card span {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #333;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .card { padding: 1.5rem; }
+        }
+    </style>
+</head>
 <body>
-    <head><title>Silverbot</title></head>
-<a href="https://silverfoot-pony.github.io/Silverbot/ToS">Silverbot Terms of Service</a>
-<a href="https://silverfoot-pony.github.io/Silverbot/PrivacyPolicy">Silverbot Privacy Policy</a>
-<h1>Hi, welcome to the Silverbot page!</h1>
-  <p>This is for information about the Silverbot, click on any link to continue.</p>
+
+    <header>
+        <!-- Navigation to Home -->
+        <a href="https://silverfoot-pony.github.io/Silverbot/">Silverbot</a>
+    </header>
+
+    <main>
+        <h1>Hi, welcome to the Silverbot page!</h1>
+        <p>This is for information about the Silverbot, click on any link to continue.</p>
+
+        <div class="link-container">
+            <!-- The Links styled as Cards -->
+            <a href="https://silverfoot-pony.github.io/Silverbot/ToS" class="card">
+                <span>Silverbot Terms of Service</span>
+            </a>
+
+            <a href="https://silverfoot-pony.github.io/Silverbot/PrivacyPolicy" class="card">
+                <span>Silverbot Privacy Policy</span>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Silverfoot-pony.github.io
+    </footer>
+
 </body>
 </html>
